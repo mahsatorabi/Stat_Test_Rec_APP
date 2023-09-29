@@ -171,6 +171,12 @@ class StatisticalTestRecommender(QWidget):
                     test_name = "Other statistical test"
 
             self.output_box.setText(f"Based on the provided information, it is recommended to use the {test_name}.")
+        
+        # Clear the input fields
+            self.sample_size_input.clear()
+            self.num_groups_input.clear()
+            self.num_variables_input.clear()
+                    
         except ValueError:
             self.output_box.setPlainText("Please enter valid numeric values for all inputs.")
 
